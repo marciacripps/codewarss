@@ -1,5 +1,23 @@
 # Example 1:
 
+# Input: nums = [1, 2, 3, 3]
+
+# Output: true
+
+def has_dupes(nums):
+    s = set()
+    for i in nums:
+        if i in s:
+            return True
+        
+        s.add(i)
+    return False 
+
+nums = [1, 2, 3, 3]
+print(has_dupes(nums))
+
+# Example 1:
+
 # Input: nums = [1,2,2,3,3,3], k = 2
 
 # Output: [2,3]
@@ -40,23 +58,7 @@ target = 7
 
 print(two_sum(nums,target))
 
-# Example 1:
 
-# Input: nums = [1, 2, 3, 3]
-
-# Output: true
-
-def has_dupes(nums):
-    s = set()
-    for i in nums:
-        if i in s:
-            return True
-        
-        s.add(i)
-    return False 
-
-nums = [1, 2, 3, 3]
-print(has_dupes(nums))
 
 
 # Input: strs = ["act","pots","tops","cat","stop","hat"]
