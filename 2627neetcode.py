@@ -16,27 +16,6 @@ def has_dupes(nums):
 nums = [1, 2, 3, 3]
 print(has_dupes(nums))
 
-# Example 1:
-
-# Input: nums = [1,2,2,3,3,3], k = 2
-
-# Output: [2,3]
-
-def topk_frequent(nums,k):
-    count = {}
-    for i in nums:
-        if i in count:
-            count[i]=count[i]+1
-        else:
-            count[i]=1
-    return sorted(count,key=count.get,reverse=True)[:k]
-
-nums = [1,2,2,3,3,3]
-k = 2
-
-print(topk_frequent(nums,k))
-
-
 
 # Input: 
 # nums = [3,4,5,6], target = 7
@@ -59,8 +38,6 @@ target = 7
 print(two_sum(nums,target))
 
 
-
-
 # Input: strs = ["act","pots","tops","cat","stop","hat"]
 
 # Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
@@ -77,3 +54,26 @@ def group_anagrams(strs):
 
 strs = ["act","pots","tops","cat","stop","hat"]
 print(group_anagrams(strs))
+
+
+# Example 1:
+
+# Input: nums = [1,2,2,3,3,3], k = 2
+
+# Output: [2,3]
+
+def topk_frequent(nums,k):
+    count = {}
+    for i in nums:
+        if i in count:
+            count[i]=count[i]+1
+        else:
+            count[i]=1
+    return sorted(count,key=count.get,reverse=True)[:k]
+
+nums = [1,2,2,3,3,3]
+k = 2
+
+print(topk_frequent(nums,k))
+
+
